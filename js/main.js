@@ -3,7 +3,7 @@
 // ============================================
 // IMPORTANT: Replace this with your actual Google Apps Script deployment URL
 // Get this URL from: Extensions → Apps Script → Deploy → New Deployment
-const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxJ1hUTuNWQEYgSy842Lbp4S-vEfwuC3zuZWm89VSS9zttKZjFIQYbK1mXpeIr--uwDzw/exec';
 
 // ============================================
 // Translations Object
