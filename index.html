@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,12 +21,16 @@
                     <span></span>
                 </button>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#problem">Problem</a></li>
-                    <li><a href="#solution">Solution</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#signup" class="btn-primary">Sign Up</a></li>
+                    <li><a href="#home" data-lang="nav-home">Home</a></li>
+                    <li><a href="#problem" data-lang="nav-problem">Problem</a></li>
+                    <li><a href="#solution" data-lang="nav-solution">Solution</a></li>
+                    <li><a href="#features" data-lang="nav-features">Features</a></li>
+                    <li><a href="#pricing" data-lang="nav-pricing">Pricing</a></li>
+                    <li><a href="#signup" class="btn-primary" data-lang="nav-signup">Sign Up</a></li>
+                    <li class="lang-switcher">
+                        <button class="lang-btn" data-lang-switch="en" title="English">EN</button>
+                        <button class="lang-btn" data-lang-switch="fa" title="فارسی">فا</button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -36,9 +40,9 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Validate Your Idea in 5 Minutes</h1>
-                <p class="hero-subtitle">Before building, know if there's real market demand</p>
-                <a href="#how-it-works" class="btn-cta">See How It Works</a>
+                <h1 class="hero-title" data-lang="hero-title">Validate Your Idea in 5 Minutes</h1>
+                <p class="hero-subtitle" data-lang="hero-subtitle">Before building, know if there's real market demand</p>
+                <a href="#how-it-works" class="btn-cta" data-lang="hero-cta">See How It Works</a>
             </div>
         </div>
     </section>
@@ -47,30 +51,30 @@
     <section id="problem" class="problem-section">
         <div class="container">
             <div class="section-header">
-                <h2>The Problem</h2>
-                <p class="stat-highlight">42% of startups fail due to lack of market demand</p>
+                <h2 data-lang="problem-title">The Problem</h2>
+                <p class="stat-highlight" data-lang="problem-stat">42% of startups fail due to lack of market demand</p>
             </div>
             <div class="problem-content">
                 <div class="problem-list">
                     <div class="problem-item">
                         <div class="problem-icon">❌</div>
-                        <h3>Wasted Time</h3>
-                        <p>Months spent building products nobody wants</p>
+                        <h3 data-lang="problem1-title">Wasted Time</h3>
+                        <p data-lang="problem1-desc">Months spent building products nobody wants</p>
                     </div>
                     <div class="problem-item">
                         <div class="problem-icon">💸</div>
-                        <h3>Wasted Money</h3>
-                        <p>Thousands invested in unvalidated ideas</p>
+                        <h3 data-lang="problem2-title">Wasted Money</h3>
+                        <p data-lang="problem2-desc">Thousands invested in unvalidated ideas</p>
                     </div>
                     <div class="problem-item">
                         <div class="problem-icon">😰</div>
-                        <h3>Emotional Toll</h3>
-                        <p>The stress of uncertainty and fear of failure</p>
+                        <h3 data-lang="problem3-title">Emotional Toll</h3>
+                        <p data-lang="problem3-desc">The stress of uncertainty and fear of failure</p>
                     </div>
                     <div class="problem-item">
                         <div class="problem-icon">🤔</div>
-                        <h3>No Clear Direction</h3>
-                        <p>Unsure if you're solving a real problem</p>
+                        <h3 data-lang="problem4-title">No Clear Direction</h3>
+                        <p data-lang="problem4-desc">Unsure if you're solving a real problem</p>
                     </div>
                 </div>
             </div>
@@ -81,28 +85,28 @@
     <section id="solution" class="solution-section">
         <div class="container">
             <div class="section-header">
-                <h2>Our Solution</h2>
-                <p>Validate your idea before you waste time and money</p>
+                <h2 data-lang="solution-title">Our Solution</h2>
+                <p data-lang="solution-subtitle">Validate your idea before you waste time and money</p>
             </div>
             <div class="solution-content">
                 <div class="solution-col">
-                    <h3>How It Works</h3>
+                    <h3 data-lang="solution-col1-title">How It Works</h3>
                     <ul class="solution-list">
-                        <li>Enter your business idea in plain English</li>
-                        <li>Our AI analyzes real market data</li>
-                        <li>Get a validation score (0-100)</li>
-                        <li>Receive actionable recommendations</li>
-                        <li>Make informed decisions in minutes</li>
+                        <li data-lang="solution-step1">Enter your business idea in plain English</li>
+                        <li data-lang="solution-step2">Our AI analyzes real market data</li>
+                        <li data-lang="solution-step3">Get a validation score (0-100)</li>
+                        <li data-lang="solution-step4">Receive actionable recommendations</li>
+                        <li data-lang="solution-step5">Make informed decisions in minutes</li>
                     </ul>
                 </div>
                 <div class="solution-col">
-                    <h3>What You Get</h3>
+                    <h3 data-lang="solution-col2-title">What You Get</h3>
                     <ul class="solution-list">
-                        <li>Market demand analysis</li>
-                        <li>Competition assessment</li>
-                        <li>Target audience insights</li>
-                        <li>Revenue potential estimate</li>
-                        <li>Next steps roadmap</li>
+                        <li data-lang="solution-get1">Market demand analysis</li>
+                        <li data-lang="solution-get2">Competition assessment</li>
+                        <li data-lang="solution-get3">Target audience insights</li>
+                        <li data-lang="solution-get4">Revenue potential estimate</li>
+                        <li data-lang="solution-get5">Next steps roadmap</li>
                     </ul>
                 </div>
             </div>
@@ -113,24 +117,24 @@
     <section id="features" class="features-section">
         <div class="container">
             <div class="section-header">
-                <h2>Key Features</h2>
-                <p>Everything you need to validate your idea</p>
+                <h2 data-lang="features-title">Key Features</h2>
+                <p data-lang="features-subtitle">Everything you need to validate your idea</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🤖</div>
-                    <h3>AI-Powered Analysis</h3>
-                    <p>Advanced algorithms analyze thousands of data points to give you accurate insights</p>
+                    <h3 data-lang="feature1-title">AI-Powered Analysis</h3>
+                    <p data-lang="feature1-desc">Advanced algorithms analyze thousands of data points to give you accurate insights</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3>Real Market Data</h3>
-                    <p>Get insights based on actual market trends, not guesses or assumptions</p>
+                    <h3 data-lang="feature2-title">Real Market Data</h3>
+                    <p data-lang="feature2-desc">Get insights based on actual market trends, not guesses or assumptions</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">💡</div>
-                    <h3>Actionable Insights</h3>
-                    <p>Receive clear recommendations on what to do next with your idea</p>
+                    <h3 data-lang="feature3-title">Actionable Insights</h3>
+                    <p data-lang="feature3-desc">Receive clear recommendations on what to do next with your idea</p>
                 </div>
             </div>
         </div>
@@ -140,29 +144,29 @@
     <section id="how-it-works" class="how-it-works-section">
         <div class="container">
             <div class="section-header">
-                <h2>How It Works</h2>
-                <p>Four simple steps to validate your idea</p>
+                <h2 data-lang="how-title">How It Works</h2>
+                <p data-lang="how-subtitle">Four simple steps to validate your idea</p>
             </div>
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <h3>Enter Your Idea</h3>
-                    <p>Describe your business idea in simple terms</p>
+                    <h3 data-lang="how-step1-title">Enter Your Idea</h3>
+                    <p data-lang="how-step1-desc">Describe your business idea in simple terms</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <h3>AI Analysis</h3>
-                    <p>Our AI analyzes real market data and trends</p>
+                    <h3 data-lang="how-step2-title">AI Analysis</h3>
+                    <p data-lang="how-step2-desc">Our AI analyzes real market data and trends</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <h3>Get Validation Score</h3>
-                    <p>Receive a comprehensive validation score (0-100)</p>
+                    <h3 data-lang="how-step3-title">Get Validation Score</h3>
+                    <p data-lang="how-step3-desc">Receive a comprehensive validation score (0-100)</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">4</div>
-                    <h3>Get Recommendations</h3>
-                    <p>Receive actionable next steps and insights</p>
+                    <h3 data-lang="how-step4-title">Get Recommendations</h3>
+                    <p data-lang="how-step4-desc">Receive actionable next steps and insights</p>
                 </div>
             </div>
         </div>
@@ -172,48 +176,48 @@
     <section id="pricing" class="pricing-section">
         <div class="container">
             <div class="section-header">
-                <h2>Compare Your Options</h2>
-                <p>See how we stack up against traditional methods</p>
+                <h2 data-lang="pricing-title">Compare Your Options</h2>
+                <p data-lang="pricing-subtitle">See how we stack up against traditional methods</p>
             </div>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>IdeaValidator</h3>
+                    <h3 data-lang="pricing1-name">IdeaValidator</h3>
                     <div class="price">$39</div>
-                    <div class="price-time">5 minutes</div>
+                    <div class="price-time" data-lang="pricing1-time">5 minutes</div>
                     <ul class="pricing-features">
-                        <li>AI-powered analysis</li>
-                        <li>Real market data</li>
-                        <li>Validation score</li>
-                        <li>Actionable insights</li>
-                        <li>Instant results</li>
+                        <li data-lang="pricing1-feat1">AI-powered analysis</li>
+                        <li data-lang="pricing1-feat2">Real market data</li>
+                        <li data-lang="pricing1-feat3">Validation score</li>
+                        <li data-lang="pricing1-feat4">Actionable insights</li>
+                        <li data-lang="pricing1-feat5">Instant results</li>
                     </ul>
-                    <a href="#signup" class="btn-pricing">Get Started</a>
+                    <a href="#signup" class="btn-pricing" data-lang="pricing1-btn">Get Started</a>
                 </div>
                 <div class="pricing-card">
-                    <h3>Professional Research</h3>
+                    <h3 data-lang="pricing2-name">Professional Research</h3>
                     <div class="price">$10K-50K</div>
-                    <div class="price-time">2-3 months</div>
+                    <div class="price-time" data-lang="pricing2-time">2-3 months</div>
                     <ul class="pricing-features">
-                        <li>Human consultants</li>
-                        <li>Custom research</li>
-                        <li>Detailed reports</li>
-                        <li>High cost</li>
-                        <li>Long wait time</li>
+                        <li data-lang="pricing2-feat1">Human consultants</li>
+                        <li data-lang="pricing2-feat2">Custom research</li>
+                        <li data-lang="pricing2-feat3">Detailed reports</li>
+                        <li data-lang="pricing2-feat4">High cost</li>
+                        <li data-lang="pricing2-feat5">Long wait time</li>
                     </ul>
-                    <button class="btn-pricing-secondary" disabled>Too Expensive</button>
+                    <button class="btn-pricing-secondary" disabled data-lang="pricing2-btn">Too Expensive</button>
                 </div>
                 <div class="pricing-card">
-                    <h3>Manual Research</h3>
-                    <div class="price">Free</div>
-                    <div class="price-time">40-60 hours</div>
+                    <h3 data-lang="pricing3-name">Manual Research</h3>
+                    <div class="price" data-lang="pricing3-price">Free</div>
+                    <div class="price-time" data-lang="pricing3-time">40-60 hours</div>
                     <ul class="pricing-features">
-                        <li>DIY research</li>
-                        <li>Google searches</li>
-                        <li>Guesswork</li>
-                        <li>Overwhelming</li>
-                        <li>Time-consuming</li>
+                        <li data-lang="pricing3-feat1">DIY research</li>
+                        <li data-lang="pricing3-feat2">Google searches</li>
+                        <li data-lang="pricing3-feat3">Guesswork</li>
+                        <li data-lang="pricing3-feat4">Overwhelming</li>
+                        <li data-lang="pricing3-feat5">Time-consuming</li>
                     </ul>
-                    <button class="btn-pricing-secondary" disabled>Too Slow</button>
+                    <button class="btn-pricing-secondary" disabled data-lang="pricing3-btn">Too Slow</button>
                 </div>
             </div>
         </div>
@@ -223,46 +227,49 @@
     <section id="signup" class="signup-section">
         <div class="container">
             <div class="section-header">
-                <h2>Join the Beta</h2>
-                <p>Be among the first to validate your ideas</p>
+                <h2 data-lang="signup-title">Join the Beta</h2>
+                <p data-lang="signup-subtitle">Be among the first to validate your ideas</p>
                 <p id="signupCount" class="signup-count"></p>
             </div>
             <div class="form-container">
                 <form id="signupForm">
                     <div class="form-group">
-                        <label for="name">Full Name *</label>
+                        <label for="name" data-lang="form-name-label">Full Name *</label>
                         <input
                             type="text"
                             id="name"
                             name="name"
+                            data-lang-placeholder="form-name-placeholder"
                             placeholder="John Doe"
                             required
                         >
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email Address *</label>
+                        <label for="email" data-lang="form-email-label">Email Address *</label>
                         <input
                             type="email"
                             id="email"
                             name="email"
+                            data-lang-placeholder="form-email-placeholder"
                             placeholder="john@example.com"
                             required
                         >
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone Number (optional)</label>
+                        <label for="phone" data-lang="form-phone-label">Phone Number (optional)</label>
                         <input
                             type="tel"
                             id="phone"
                             name="phone"
+                            data-lang-placeholder="form-phone-placeholder"
                             placeholder="+1 (555) 000-0000"
                         >
                     </div>
 
                     <button type="submit" id="submitBtn" class="btn-submit">
-                        <span id="btnText">Join the Beta</span>
+                        <span id="btnText" data-lang="form-submit-btn">Join the Beta</span>
                         <span id="spinner" class="spinner" style="display: none;"></span>
                     </button>
 
@@ -277,12 +284,12 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-left">
-                    <p>&copy; 2025 IdeaValidator. All rights reserved.</p>
+                    <p data-lang="footer-copyright">&copy; 2025 IdeaValidator. All rights reserved.</p>
                 </div>
                 <div class="footer-right">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#privacy" data-lang="footer-privacy">Privacy Policy</a>
+                    <a href="#terms" data-lang="footer-terms">Terms of Service</a>
+                    <a href="#contact" data-lang="footer-contact">Contact</a>
                 </div>
             </div>
         </div>
