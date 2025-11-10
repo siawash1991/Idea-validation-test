@@ -749,7 +749,31 @@ section {
 }
 
 [dir="rtl"] body {
-    font-family: Tahoma, 'Segoe UI', Arial, sans-serif;
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-weight: 700;
+}
+
+[dir="rtl"] .btn-primary,
+[dir="rtl"] .btn-cta,
+[dir="rtl"] .btn-submit,
+[dir="rtl"] .btn-pricing,
+[dir="rtl"] button {
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-weight: 600;
+}
+
+[dir="rtl"] input,
+[dir="rtl"] label {
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Arial, sans-serif;
 }
 
 /* Navigation RTL */
