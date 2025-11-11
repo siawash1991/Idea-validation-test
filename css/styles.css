@@ -451,6 +451,168 @@ section {
 }
 
 /* ============================================
+   Data Sources Section
+   ============================================ */
+.data-sources-section {
+    background-color: var(--white);
+}
+
+.data-sources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.data-source {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-color);
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.data-source:hover {
+    border-color: var(--accent-color);
+    background-color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
+}
+
+/* ============================================
+   What You Get Section
+   ============================================ */
+.whatyouget-section {
+    background-color: var(--light-bg);
+}
+
+.whatyouget-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.whatyouget-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.whatyouget-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.whatyouget-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.whatyouget-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.whatyouget-item p {
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Social Proof Section
+   ============================================ */
+.social-proof-section {
+    background-color: var(--white);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.testimonial-card {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    color: var(--light-text);
+    font-weight: 600;
+    text-align: right;
+}
+
+.social-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--border-color);
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 150px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--light-text);
+    font-weight: 600;
+}
+
+/* ============================================
+   Pricing Section Updates
+   ============================================ */
+.pricing-popular {
+    position: relative;
+    border: 3px solid var(--accent-color);
+    transform: scale(1.05);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+}
+
+/* ============================================
    Signup Form Section
    ============================================ */
 .signup-section {
@@ -645,6 +807,22 @@ section {
         transform: scale(1);
     }
 
+    .pricing-popular {
+        transform: scale(1);
+    }
+
+    .data-sources-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .whatyouget-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
     .form-container {
         padding: 2rem;
     }
@@ -685,8 +863,17 @@ section {
     .features-grid,
     .steps-grid,
     .problem-list,
-    .solution-content {
+    .solution-content,
+    .whatyouget-grid {
         grid-template-columns: 1fr;
+    }
+
+    .data-sources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
     }
 
     .form-container {
@@ -823,8 +1010,21 @@ section {
 [dir="rtl"] .features-grid,
 [dir="rtl"] .steps-grid,
 [dir="rtl"] .pricing-grid,
-[dir="rtl"] .problem-list {
+[dir="rtl"] .problem-list,
+[dir="rtl"] .data-sources-grid,
+[dir="rtl"] .whatyouget-grid,
+[dir="rtl"] .testimonials-grid {
     direction: rtl;
+}
+
+/* Testimonial RTL */
+[dir="rtl"] .testimonial-card {
+    border-left: none;
+    border-right: 4px solid var(--accent-color);
+}
+
+[dir="rtl"] .testimonial-author {
+    text-align: left;
 }
 
 /* Mobile Menu RTL */
