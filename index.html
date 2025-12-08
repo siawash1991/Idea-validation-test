@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Validate Your Business Idea in 5 Minutes">
-    <title>IdeaValidator - Validate Your Business Idea</title>
+    <meta name="description" content="اعتبارسنجی ایده کسب‌وکار با هوش مصنوعی - تحقیق کامل در Reddit و Perplexity">
+    <title>IdeaValidator - اعتبارسنجی ایده با AI</title>
     <!-- Vazirmatn Persian Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +12,18 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar glass-nav">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <a href="#home">IdeaValidator</a>
+                    <a href="#home">
+                        <span class="logo-icon">💡</span>
+                        <span>IdeaValidator</span>
+                    </a>
                 </div>
                 <button class="hamburger" id="hamburger">
                     <span></span>
@@ -25,120 +31,211 @@
                     <span></span>
                 </button>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" data-lang="nav-home">Home</a></li>
-                    <li><a href="#problem" data-lang="nav-problem">Problem</a></li>
-                    <li><a href="#solution" data-lang="nav-solution">Solution</a></li>
-                    <li><a href="#features" data-lang="nav-features">Features</a></li>
-                    <li><a href="#pricing" data-lang="nav-pricing">Pricing</a></li>
-                    <li><a href="#signup" class="btn-primary" data-lang="nav-signup">Sign Up</a></li>
+                    <li><a href="#home" data-lang="nav-home">خانه</a></li>
+                    <li><a href="#why-validate" data-lang="nav-problem">چرا اعتبارسنجی؟</a></li>
+                    <li><a href="#what-you-get" data-lang="nav-solution">چه می‌گیرید؟</a></li>
+                    <li><a href="#pricing" data-lang="nav-pricing">قیمت</a></li>
                     <li class="lang-switcher">
-                        <button class="lang-btn" data-lang-switch="en" title="English">EN</button>
-                        <button class="lang-btn" data-lang-switch="fa" title="فارسی">فا</button>
+                        <button class="lang-btn glass-btn-small" data-lang-switch="en" title="English">EN</button>
+                        <button class="lang-btn glass-btn-small active" data-lang-switch="fa" title="فارسی">فا</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Signup Form -->
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" data-lang="hero-title">Get Your Validation Score in 5 Minutes (Not 5 Months)</h1>
-                <p class="hero-subtitle" data-lang="hero-subtitle">42% of startups fail due to no market demand. We validate yours against 12,000+ real problems from Reddit, Product Hunt, Hacker News & more.</p>
-                <a href="#how-it-works" class="btn-cta" data-lang="hero-cta">See Your Validation Score</a>
-                <p class="hero-trust" data-lang="hero-trust" style="margin-top: 2rem; font-size: 1.1rem; opacity: 0.9;">Trusted by 100+ founders</p>
-            </div>
-        </div>
-    </section>
+            <div class="hero-grid">
+                <!-- Left Side: Content -->
+                <div class="hero-content">
+                    <div class="hero-badge glass-badge" data-lang="hero-badge">
+                        <span class="badge-icon">🚀</span>
+                        <span>تحقیق کامل با قدرت AI</span>
+                    </div>
+                    <h1 class="hero-title" data-lang="hero-title">
+                        وقت نداری ایده‌ات رو <span class="gradient-text">اعتبارسنجی</span> کنی؟
+                    </h1>
+                    <p class="hero-subtitle" data-lang="hero-subtitle">
+                        تیم ما با قدرت هوش مصنوعی، یک تحقیق کامل در Reddit و Perplexity انجام میده و تمام نقاط درد (Pain Points) مشتریان رو برات پیدا می‌کنه!
+                    </p>
 
-    <!-- Problem Section -->
-    <section id="problem" class="problem-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-lang="problem-title">The Problem</h2>
-                <p class="stat-highlight" data-lang="problem-stat">42% of startups fail due to lack of market demand</p>
-            </div>
-            <div class="problem-content">
-                <div class="problem-list">
-                    <div class="problem-item">
-                        <div class="problem-icon">❌</div>
-                        <h3 data-lang="problem1-title">Wasted Time</h3>
-                        <p data-lang="problem1-desc">Months spent building products nobody wants</p>
+                    <!-- Price Badge -->
+                    <div class="price-badge glass-card">
+                        <div class="price-main">
+                            <span class="price-amount" data-lang="price-amount">۲۰$</span>
+                            <span class="price-divider">یا</span>
+                            <span class="price-amount-fa" data-lang="price-amount-fa">۲ میلیون تومان</span>
+                        </div>
+                        <p class="price-desc" data-lang="price-desc">برای هر ایده‌سنجی کامل</p>
                     </div>
-                    <div class="problem-item">
-                        <div class="problem-icon">💸</div>
-                        <h3 data-lang="problem2-title">Wasted Money</h3>
-                        <p data-lang="problem2-desc">Thousands invested in unvalidated ideas</p>
+
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span data-lang="trust-1">تحویل در ۲۴ ساعت</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span data-lang="trust-2">گارانتی بازگشت پول</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span data-lang="trust-3">گزارش کامل PDF</span>
+                        </div>
                     </div>
-                    <div class="problem-item">
-                        <div class="problem-icon">😰</div>
-                        <h3 data-lang="problem3-title">Emotional Toll</h3>
-                        <p data-lang="problem3-desc">The stress of uncertainty and fear of failure</p>
-                    </div>
-                    <div class="problem-item">
-                        <div class="problem-icon">🤔</div>
-                        <h3 data-lang="problem4-title">No Clear Direction</h3>
-                        <p data-lang="problem4-desc">Unsure if you're solving a real problem</p>
+                </div>
+
+                <!-- Right Side: Signup Form -->
+                <div class="hero-form">
+                    <div class="form-container glass-card">
+                        <div class="form-header">
+                            <h2 data-lang="form-title">همین الان ایده‌ات رو ثبت کن!</h2>
+                            <p data-lang="form-subtitle">ما در کمتر از ۲۴ ساعت گزارش کامل رو برات میفرستیم</p>
+                        </div>
+                        <form id="signupForm">
+                            <div class="form-group">
+                                <label for="name" data-lang="form-name-label">نام کامل *</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    class="glass-input"
+                                    data-lang-placeholder="form-name-placeholder"
+                                    placeholder="علی احمدی"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" data-lang="form-email-label">ایمیل *</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="glass-input"
+                                    data-lang-placeholder="form-email-placeholder"
+                                    placeholder="ali@example.com"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" data-lang="form-phone-label">شماره تماس</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    class="glass-input"
+                                    data-lang-placeholder="form-phone-placeholder"
+                                    placeholder="۰۹۱۲۳۴۵۶۷۸۹"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="idea" data-lang="form-idea-label">ایده‌ات رو خلاصه بنویس *</label>
+                                <textarea
+                                    id="idea"
+                                    name="idea"
+                                    class="glass-input glass-textarea"
+                                    data-lang-placeholder="form-idea-placeholder"
+                                    placeholder="مثلاً: یک اپلیکیشن برای مدیریت هزینه‌های روزانه..."
+                                    rows="3"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" id="submitBtn" class="btn-submit glass-btn-primary">
+                                <span id="btnText" data-lang="form-submit-btn">🚀 شروع اعتبارسنجی</span>
+                                <span id="spinner" class="spinner" style="display: none;"></span>
+                            </button>
+
+                            <p id="formMessage" class="form-message"></p>
+
+                            <p class="form-note" data-lang="form-note">
+                                <span class="note-icon">🔒</span>
+                                اطلاعات شما محرمانه است و با کسی به اشتراک گذاشته نمی‌شود
+                            </p>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Solution Section -->
-    <section id="solution" class="solution-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-lang="solution-title">Our Solution</h2>
-                <p data-lang="solution-subtitle">Validate your idea before you waste time and money</p>
-            </div>
-            <div class="solution-content">
-                <div class="solution-col">
-                    <h3 data-lang="solution-col1-title">How It Works</h3>
-                    <ul class="solution-list">
-                        <li data-lang="solution-step1">Enter your business idea in plain English</li>
-                        <li data-lang="solution-step2">Our AI analyzes real market data</li>
-                        <li data-lang="solution-step3">Get a validation score (0-100)</li>
-                        <li data-lang="solution-step4">Receive actionable recommendations</li>
-                        <li data-lang="solution-step5">Make informed decisions in minutes</li>
-                    </ul>
-                </div>
-                <div class="solution-col">
-                    <h3 data-lang="solution-col2-title">What You Get</h3>
-                    <ul class="solution-list">
-                        <li data-lang="solution-get1">Market demand analysis</li>
-                        <li data-lang="solution-get2">Competition assessment</li>
-                        <li data-lang="solution-get3">Target audience insights</li>
-                        <li data-lang="solution-get4">Revenue potential estimate</li>
-                        <li data-lang="solution-get5">Next steps roadmap</li>
-                    </ul>
-                </div>
-            </div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span data-lang="scroll-text">بیشتر بدانید</span>
+            <div class="scroll-arrow">↓</div>
         </div>
     </section>
 
-    <!-- Data Sources Section -->
-    <section id="data-sources" class="data-sources-section">
+    <!-- Why Validate Section -->
+    <section id="why-validate" class="why-section">
         <div class="container">
             <div class="section-header">
-                <h2 data-lang="data-title">Analyzing 12,000+ Real Problems Daily</h2>
-                <p data-lang="data-subtitle">We search these platforms to find what people actually need</p>
-                <p class="data-update" data-lang="data-update" style="font-size: 0.9rem; color: #27AE60; font-weight: 600; margin-top: 0.5rem;">Updated daily</p>
+                <span class="section-badge glass-badge" data-lang="why-badge">⚠️ آمار تکان‌دهنده</span>
+                <h2 data-lang="why-title">چرا باید قبل از شروع، ایده‌ات رو اعتبارسنجی کنی؟</h2>
             </div>
-            <div class="data-sources-grid">
-                <div class="data-source">Reddit</div>
-                <div class="data-source">Product Hunt</div>
-                <div class="data-source">Hacker News</div>
-                <div class="data-source">Indie Hackers</div>
-                <div class="data-source">Twitter/X</div>
-                <div class="data-source">Perplexity</div>
-                <div class="data-source">Google Trends</div>
-                <div class="data-source">Y Combinator</div>
-                <div class="data-source">LinkedIn</div>
-                <div class="data-source">Quora</div>
-                <div class="data-source">Stack Overflow</div>
-                <div class="data-source">GitHub</div>
+
+            <!-- Infographic Stats -->
+            <div class="stats-infographic">
+                <div class="stat-card glass-card stat-danger">
+                    <div class="stat-visual">
+                        <div class="stat-circle">
+                            <svg viewBox="0 0 36 36" class="circular-chart">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                                <path class="circle-danger" stroke-dasharray="42, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            </svg>
+                            <span class="stat-number">۴۲٪</span>
+                        </div>
+                    </div>
+                    <h3 data-lang="stat1-title">شکست به دلیل نبود تقاضا</h3>
+                    <p data-lang="stat1-desc">۴۲٪ استارتاپ‌ها فقط به این دلیل شکست می‌خورند که محصولشان را کسی نمی‌خواهد!</p>
+                </div>
+
+                <div class="stat-card glass-card stat-warning">
+                    <div class="stat-visual">
+                        <div class="stat-icon-large">💸</div>
+                        <span class="stat-number">$۲۹K</span>
+                    </div>
+                    <h3 data-lang="stat2-title">میانگین هدررفت سرمایه</h3>
+                    <p data-lang="stat2-desc">میانگین پولی که بنیان‌گذاران قبل از فهمیدن اشتباهشان از دست می‌دهند</p>
+                </div>
+
+                <div class="stat-card glass-card stat-info">
+                    <div class="stat-visual">
+                        <div class="stat-icon-large">⏰</div>
+                        <span class="stat-number">۱۸ ماه</span>
+                    </div>
+                    <h3 data-lang="stat3-title">میانگین زمان هدررفته</h3>
+                    <p data-lang="stat3-desc">زمانی که صرف ساخت چیزی می‌شود که بازار نمی‌خواهد</p>
+                </div>
+            </div>
+
+            <!-- Problem Points -->
+            <div class="problem-grid">
+                <div class="problem-card glass-card">
+                    <div class="problem-icon">❌</div>
+                    <h3 data-lang="problem1-title">بدون تحقیق شروع می‌کنی</h3>
+                    <p data-lang="problem1-desc">فکر می‌کنی ایده‌ات عالیه ولی نمی‌دونی مردم واقعاً چی می‌خوان</p>
+                </div>
+                <div class="problem-card glass-card">
+                    <div class="problem-icon">🤯</div>
+                    <h3 data-lang="problem2-title">وقت تحقیق نداری</h3>
+                    <p data-lang="problem2-desc">تحقیق بازار ماه‌ها طول می‌کشه و تو باید سریع شروع کنی</p>
+                </div>
+                <div class="problem-card glass-card">
+                    <div class="problem-icon">🎯</div>
+                    <h3 data-lang="problem3-title">نمی‌دونی کجا تحقیق کنی</h3>
+                    <p data-lang="problem3-desc">داده‌های واقعی پراکنده‌ان: Reddit، Twitter، فروم‌ها...</p>
+                </div>
+                <div class="problem-card glass-card">
+                    <div class="problem-icon">😰</div>
+                    <h3 data-lang="problem4-title">ترس از شکست</h3>
+                    <p data-lang="problem4-desc">نمی‌دونی ایده‌ات موفق میشه یا نه و این استرس‌زاست</p>
+                </div>
             </div>
         </div>
     </section>
@@ -147,137 +244,114 @@
     <section id="what-you-get" class="whatyouget-section">
         <div class="container">
             <div class="section-header">
-                <h2 data-lang="whatyouget-title">What You Get in Your Report</h2>
-                <p data-lang="whatyouget-subtitle">Everything you need to make a confident GO/NO-GO decision</p>
+                <span class="section-badge glass-badge" data-lang="get-badge">📋 گزارش کامل</span>
+                <h2 data-lang="get-title">چی از ما دریافت می‌کنی؟</h2>
+                <p data-lang="get-subtitle">یک گزارش جامع که با قدرت AI و تحقیق در منابع واقعی آماده شده</p>
             </div>
-            <div class="whatyouget-grid">
-                <div class="whatyouget-item">
-                    <div class="whatyouget-icon">📊</div>
-                    <h3 data-lang="whatyouget-item1-title">Validation Score (0-10)</h3>
-                    <p data-lang="whatyouget-item1-desc">Clear score showing market demand strength with confidence level</p>
+
+            <!-- Process Flow -->
+            <div class="process-flow">
+                <div class="process-step glass-card">
+                    <div class="step-number">۱</div>
+                    <div class="step-icon">📝</div>
+                    <h3 data-lang="step1-title">ایده‌ات رو ثبت کن</h3>
+                    <p data-lang="step1-desc">فقط ایده‌ات رو یه خط توضیح بده</p>
                 </div>
-                <div class="whatyouget-item">
-                    <div class="whatyouget-icon">💬</div>
-                    <h3 data-lang="whatyouget-item2-title">Top 5 Pain Points</h3>
-                    <p data-lang="whatyouget-item2-desc">Real quotes & evidence from actual users expressing their problems</p>
+                <div class="process-arrow">→</div>
+                <div class="process-step glass-card">
+                    <div class="step-number">۲</div>
+                    <div class="step-icon">🤖</div>
+                    <h3 data-lang="step2-title">AI تحقیق می‌کنه</h3>
+                    <p data-lang="step2-desc">جستجو در Reddit + Perplexity + منابع دیگه</p>
                 </div>
-                <div class="whatyouget-item">
-                    <div class="whatyouget-icon">🎯</div>
-                    <h3 data-lang="whatyouget-item3-title">Market Size Estimate</h3>
-                    <p data-lang="whatyouget-item3-desc">TAM/SAM/SOM calculations to understand your revenue potential</p>
+                <div class="process-arrow">→</div>
+                <div class="process-step glass-card">
+                    <div class="step-number">۳</div>
+                    <div class="step-icon">📊</div>
+                    <h3 data-lang="step3-title">تحلیل و امتیازدهی</h3>
+                    <p data-lang="step3-desc">Pain Points + رقبا + پتانسیل بازار</p>
                 </div>
-                <div class="whatyouget-item">
-                    <div class="whatyouget-icon">💰</div>
-                    <h3 data-lang="whatyouget-item4-title">Willingness-to-Pay</h3>
-                    <p data-lang="whatyouget-item4-desc">What customers will actually pay based on competitor analysis</p>
+                <div class="process-arrow">→</div>
+                <div class="process-step glass-card">
+                    <div class="step-number">۴</div>
+                    <div class="step-icon">📄</div>
+                    <h3 data-lang="step4-title">گزارش PDF دریافت کن</h3>
+                    <p data-lang="step4-desc">گزارش کامل در ۲۴ ساعت</p>
                 </div>
-                <div class="whatyouget-item">
-                    <div class="whatyouget-icon">🔍</div>
-                    <h3 data-lang="whatyouget-item5-title">Competition Analysis</h3>
-                    <p data-lang="whatyouget-item5-desc">Who else is solving this and how you can differentiate</p>
+            </div>
+
+            <!-- Deliverables Grid -->
+            <div class="deliverables-grid">
+                <div class="deliverable-card glass-card">
+                    <div class="deliverable-icon">🎯</div>
+                    <h3 data-lang="del1-title">Pain Points واقعی</h3>
+                    <p data-lang="del1-desc">مشکلات واقعی که مردم در Reddit و فروم‌ها بیان کردن - با لینک به پست‌های اصلی</p>
                 </div>
-                <div class="whatyouget-item">
-                    <div class="whatyouget-icon">✅</div>
-                    <h3 data-lang="whatyouget-item6-title">GO/NO-GO Decision</h3>
-                    <p data-lang="whatyouget-item6-desc">Clear recommendation with reasoning: Build it, pivot, or drop it</p>
+                <div class="deliverable-card glass-card">
+                    <div class="deliverable-icon">📈</div>
+                    <h3 data-lang="del2-title">امتیاز اعتبارسنجی (۰-۱۰)</h3>
+                    <p data-lang="del2-desc">یک امتیاز واضح که نشون میده ایده‌ات چقدر پتانسیل داره</p>
+                </div>
+                <div class="deliverable-card glass-card">
+                    <div class="deliverable-icon">🔍</div>
+                    <h3 data-lang="del3-title">تحلیل رقبا</h3>
+                    <p data-lang="del3-desc">چه کسایی این مشکل رو حل می‌کنن و چطور میتونی متمایز باشی</p>
+                </div>
+                <div class="deliverable-card glass-card">
+                    <div class="deliverable-icon">💰</div>
+                    <h3 data-lang="del4-title">تخمین اندازه بازار</h3>
+                    <p data-lang="del4-desc">TAM/SAM/SOM - این بازار چقدر بزرگه و چقدر میتونی ازش سهم ببری</p>
+                </div>
+                <div class="deliverable-card glass-card">
+                    <div class="deliverable-icon">💳</div>
+                    <h3 data-lang="del5-title">تمایل به پرداخت</h3>
+                    <p data-lang="del5-desc">مردم حاضرن چقدر برای حل این مشکل پول بدن؟</p>
+                </div>
+                <div class="deliverable-card glass-card">
+                    <div class="deliverable-icon">✅</div>
+                    <h3 data-lang="del6-title">توصیه نهایی: برو/نرو</h3>
+                    <p data-lang="del6-desc">یک توصیه واضح با دلیل: بساز، تغییر بده، یا رها کن</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features-section">
+    <!-- Data Sources Section -->
+    <section id="data-sources" class="sources-section">
         <div class="container">
             <div class="section-header">
-                <h2 data-lang="features-title">Key Features</h2>
-                <p data-lang="features-subtitle">Everything you need to validate your idea</p>
+                <span class="section-badge glass-badge" data-lang="sources-badge">🔗 منابع داده</span>
+                <h2 data-lang="sources-title">از کجا تحقیق می‌کنیم؟</h2>
+                <p data-lang="sources-subtitle">ترکیب هوش مصنوعی با داده‌های واقعی از سراسر اینترنت</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3 data-lang="feature1-title">AI-Powered Analysis</h3>
-                    <p data-lang="feature1-desc">Advanced algorithms analyze thousands of data points to give you accurate insights</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3 data-lang="feature2-title">Real Market Data</h3>
-                    <p data-lang="feature2-desc">Get insights based on actual market trends, not guesses or assumptions</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3 data-lang="feature3-title">Actionable Insights</h3>
-                    <p data-lang="feature3-desc">Receive clear recommendations on what to do next with your idea</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-lang="how-title">How It Works</h2>
-                <p data-lang="how-subtitle">Four simple steps to validate your idea</p>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3 data-lang="how-step1-title">Enter Your Idea</h3>
-                    <p data-lang="how-step1-desc">Describe your business idea in simple terms</p>
+            <div class="sources-showcase">
+                <div class="source-main glass-card">
+                    <div class="source-logo">🤖</div>
+                    <h3>Reddit + AI</h3>
+                    <p data-lang="source-reddit">جستجوی عمیق در ساب‌ردیت‌های مرتبط برای پیدا کردن مشکلات واقعی کاربران</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3 data-lang="how-step2-title">AI Analysis</h3>
-                    <p data-lang="how-step2-desc">Our AI analyzes real market data and trends</p>
+                <div class="source-main glass-card">
+                    <div class="source-logo">🔮</div>
+                    <h3>Perplexity AI</h3>
+                    <p data-lang="source-perplexity">تحقیق عمیق با جدیدترین داده‌ها و روندهای بازار</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3 data-lang="how-step3-title">Get Validation Score</h3>
-                    <p data-lang="how-step3-desc">Receive a comprehensive validation score (0-100)</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h3 data-lang="how-step4-title">Get Recommendations</h3>
-                    <p data-lang="how-step4-desc">Receive actionable next steps and insights</p>
+                <div class="source-main glass-card">
+                    <div class="source-logo">🧠</div>
+                    <h3>Claude AI</h3>
+                    <p data-lang="source-claude">تحلیل پیشرفته و ترکیب همه داده‌ها برای گزارش نهایی</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Social Proof Section -->
-    <section id="social-proof" class="social-proof-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-lang="social-title">Join 100+ Successful Founders</h2>
-                <p data-lang="social-subtitle">Entrepreneurs who validated before building</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text" data-lang="social-testimonial1">"Saved me 6 months of wasted development time"</p>
-                    <p class="testimonial-author" data-lang="social-testimonial1-author">— Ahmed K.</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text" data-lang="social-testimonial2">"Found the real market problem I should solve"</p>
-                    <p class="testimonial-author" data-lang="social-testimonial2-author">— Sarah M.</p>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text" data-lang="social-testimonial3">"Perfect validation before pitching to investors"</p>
-                    <p class="testimonial-author" data-lang="social-testimonial3-author">— Mohammad R.</p>
-                </div>
-            </div>
-            <div class="social-stats">
-                <div class="stat-item">
-                    <div class="stat-number" data-lang="social-stat1">100+</div>
-                    <div class="stat-label" data-lang="social-stat1-label">Founders</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-lang="social-stat2">12K+</div>
-                    <div class="stat-label" data-lang="social-stat2-label">Problems Analyzed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-lang="social-stat3">5 min</div>
-                    <div class="stat-label" data-lang="social-stat3-label">Avg. Time</div>
-                </div>
+            <div class="sources-grid">
+                <div class="source-item glass-card-small">Product Hunt</div>
+                <div class="source-item glass-card-small">Hacker News</div>
+                <div class="source-item glass-card-small">Indie Hackers</div>
+                <div class="source-item glass-card-small">Twitter/X</div>
+                <div class="source-item glass-card-small">Google Trends</div>
+                <div class="source-item glass-card-small">LinkedIn</div>
+                <div class="source-item glass-card-small">Quora</div>
+                <div class="source-item glass-card-small">GitHub</div>
             </div>
         </div>
     </section>
@@ -286,122 +360,146 @@
     <section id="pricing" class="pricing-section">
         <div class="container">
             <div class="section-header">
-                <h2 data-lang="pricing-title">Simple, Transparent Pricing</h2>
-                <p data-lang="pricing-subtitle">Start free, upgrade when you need more validations</p>
+                <span class="section-badge glass-badge" data-lang="pricing-badge">💎 قیمت ساده</span>
+                <h2 data-lang="pricing-title">یک قیمت، یک گزارش کامل</h2>
+                <p data-lang="pricing-subtitle">بدون پلن‌های پیچیده - فقط پرداخت کن و گزارشت رو بگیر</p>
             </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3 data-lang="pricing1-name">FREE</h3>
-                    <div class="price" data-lang="pricing1-price">$0</div>
-                    <div class="price-time" data-lang="pricing1-time">1 validation/month</div>
+
+            <div class="pricing-single">
+                <div class="pricing-card-main glass-card">
+                    <div class="pricing-badge" data-lang="pricing-popular">تنها پلن</div>
+                    <div class="pricing-header">
+                        <h3 data-lang="pricing-name">اعتبارسنجی کامل</h3>
+                        <div class="pricing-prices">
+                            <div class="price-option">
+                                <span class="price-amount-large">$۲۰</span>
+                                <span class="price-label" data-lang="price-usd">دلار</span>
+                            </div>
+                            <div class="price-divider-large">یا</div>
+                            <div class="price-option">
+                                <span class="price-amount-large">۲,۰۰۰,۰۰۰</span>
+                                <span class="price-label" data-lang="price-toman">تومان</span>
+                            </div>
+                        </div>
+                        <p class="price-per" data-lang="price-per">برای هر ایده</p>
+                    </div>
+
                     <ul class="pricing-features">
-                        <li data-lang="pricing1-feat1">Basic validation score</li>
-                        <li data-lang="pricing1-feat2">Top 3 pain points</li>
-                        <li data-lang="pricing1-feat3">Market size estimate</li>
-                        <li data-lang="pricing1-feat4">Email support</li>
-                        <li data-lang="pricing1-feat5">—</li>
+                        <li><span class="feature-check">✓</span> <span data-lang="feat1">تحقیق کامل در Reddit</span></li>
+                        <li><span class="feature-check">✓</span> <span data-lang="feat2">جستجوی عمیق Perplexity</span></li>
+                        <li><span class="feature-check">✓</span> <span data-lang="feat3">تحلیل با Claude AI</span></li>
+                        <li><span class="feature-check">✓</span> <span data-lang="feat4">۵+ Pain Point واقعی با لینک</span></li>
+                        <li><span class="feature-check">✓</span> <span data-lang="feat5">امتیاز اعتبارسنجی ۰-۱۰</span></li>
+                        <li><span class="feature-check">✓</span> <span data-lang="feat6">تحلیل رقبا</span></li>
+                        <li><span class="feature-check">✓</span> <span data-lang="feat7">تخمین اندازه بازار</span></li>
+                        <li><span class="feature-check">✓</span> <span data-lang="feat8">توصیه برو/نرو</span></li>
+                        <li><span class="feature-check">✓</span> <span data-lang="feat9">گزارش PDF کامل</span></li>
+                        <li><span class="feature-check">✓</span> <span data-lang="feat10">تحویل در ۲۴ ساعت</span></li>
                     </ul>
-                    <a href="#signup" class="btn-pricing" data-lang="pricing1-btn">Start Free</a>
-                </div>
-                <div class="pricing-card pricing-popular">
-                    <div class="popular-badge" data-lang="pricing2-popular">Most Popular</div>
-                    <h3 data-lang="pricing2-name">STARTER</h3>
-                    <div class="price" data-lang="pricing2-price">$39</div>
-                    <div class="price-time" data-lang="pricing2-time">5 validations/month</div>
-                    <ul class="pricing-features">
-                        <li data-lang="pricing2-feat1">Full validation score (0-10)</li>
-                        <li data-lang="pricing2-feat2">Top 5 pain points with quotes</li>
-                        <li data-lang="pricing2-feat3">TAM/SAM/SOM calculations</li>
-                        <li data-lang="pricing2-feat4">Competition analysis</li>
-                        <li data-lang="pricing2-feat5">GO/NO-GO recommendation</li>
-                    </ul>
-                    <a href="#signup" class="btn-pricing" data-lang="pricing2-btn">Get Started</a>
-                </div>
-                <div class="pricing-card">
-                    <h3 data-lang="pricing3-name">PRO</h3>
-                    <div class="price" data-lang="pricing3-price">$99</div>
-                    <div class="price-time" data-lang="pricing3-time">Unlimited validations</div>
-                    <ul class="pricing-features">
-                        <li data-lang="pricing3-feat1">Everything in Starter</li>
-                        <li data-lang="pricing3-feat2">Willingness-to-pay analysis</li>
-                        <li data-lang="pricing3-feat3">Customer profile deep dive</li>
-                        <li data-lang="pricing3-feat4">Priority email support</li>
-                        <li data-lang="pricing3-feat5">API access (coming soon)</li>
-                    </ul>
-                    <a href="#signup" class="btn-pricing" data-lang="pricing3-btn">Go Pro</a>
+
+                    <a href="#home" class="btn-pricing glass-btn-primary" data-lang="pricing-cta">همین الان شروع کن 🚀</a>
+
+                    <div class="guarantee glass-card-small">
+                        <span class="guarantee-icon">🛡️</span>
+                        <p data-lang="guarantee">گارانتی ۱۰۰٪ بازگشت پول اگر راضی نبودی</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Signup Form Section -->
-    <section id="signup" class="signup-section">
+    <!-- Social Proof Section -->
+    <section id="social-proof" class="social-section">
         <div class="container">
             <div class="section-header">
-                <h2 data-lang="signup-title">Join the Beta</h2>
-                <p data-lang="signup-subtitle">Be among the first to validate your ideas</p>
-                <p id="signupCount" class="signup-count"></p>
+                <span class="section-badge glass-badge" data-lang="social-badge">⭐ نظرات</span>
+                <h2 data-lang="social-title">چرا بنیان‌گذاران به ما اعتماد می‌کنن؟</h2>
             </div>
-            <div class="form-container">
-                <form id="signupForm">
-                    <div class="form-group">
-                        <label for="name" data-lang="form-name-label">Full Name *</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            data-lang-placeholder="form-name-placeholder"
-                            placeholder="John Doe"
-                            required
-                        >
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text" data-lang="testimonial1">"۶ ماه وقتم رو نجات داد! فهمیدم ایده‌ام بازار نداره قبل از اینکه پول و وقتم رو هدر بدم."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍💻</div>
+                        <div>
+                            <span class="author-name" data-lang="testimonial1-author">احمد کریمی</span>
+                            <span class="author-role" data-lang="testimonial1-role">بنیان‌گذار استارتاپ</span>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email" data-lang="form-email-label">Email Address *</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            data-lang-placeholder="form-email-placeholder"
-                            placeholder="john@example.com"
-                            required
-                        >
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text" data-lang="testimonial2">"گزارش خیلی کامل بود. Pain Points واقعی با لینک به پست‌های Reddit - دقیقاً چیزی که نیاز داشتم!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩‍💼</div>
+                        <div>
+                            <span class="author-name" data-lang="testimonial2-author">سارا محمدی</span>
+                            <span class="author-role" data-lang="testimonial2-role">Product Manager</span>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="phone" data-lang="form-phone-label">Phone Number (optional)</label>
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            data-lang-placeholder="form-phone-placeholder"
-                            placeholder="+1 (555) 000-0000"
-                        >
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text" data-lang="testimonial3">"قبل از جلسه با سرمایه‌گذارها گزارش رو گرفتم. خیلی کمکم کرد که با اعتماد به نفس صحبت کنم."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍🔬</div>
+                        <div>
+                            <span class="author-name" data-lang="testimonial3-author">محمد رضایی</span>
+                            <span class="author-role" data-lang="testimonial3-role">Tech Founder</span>
+                        </div>
                     </div>
+                </div>
+            </div>
 
-                    <button type="submit" id="submitBtn" class="btn-submit">
-                        <span id="btnText" data-lang="form-submit-btn">Join the Beta</span>
-                        <span id="spinner" class="spinner" style="display: none;"></span>
-                    </button>
-
-                    <p id="formMessage" class="form-message"></p>
-                </form>
+            <div class="stats-row">
+                <div class="stat-item glass-card-small">
+                    <span class="stat-value" data-lang="stat-founders">۱۰۰+</span>
+                    <span class="stat-label" data-lang="stat-founders-label">بنیان‌گذار</span>
+                </div>
+                <div class="stat-item glass-card-small">
+                    <span class="stat-value" data-lang="stat-ideas">۲۵۰+</span>
+                    <span class="stat-label" data-lang="stat-ideas-label">ایده بررسی شده</span>
+                </div>
+                <div class="stat-item glass-card-small">
+                    <span class="stat-value" data-lang="stat-satisfaction">۹۸٪</span>
+                    <span class="stat-label" data-lang="stat-satisfaction-label">رضایت مشتری</span>
+                </div>
+                <div class="stat-item glass-card-small">
+                    <span class="stat-value" data-lang="stat-time">۲۴h</span>
+                    <span class="stat-label" data-lang="stat-time-label">زمان تحویل</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Final CTA Section -->
+    <section id="final-cta" class="cta-section">
+        <div class="container">
+            <div class="cta-content glass-card">
+                <h2 data-lang="cta-title">آماده‌ای ایده‌ات رو اعتبارسنجی کنی؟</h2>
+                <p data-lang="cta-subtitle">قبل از اینکه وقت و پولت رو هدر بدی، مطمئن شو که مردم واقعاً چیزی که می‌سازی رو می‌خوان!</p>
+                <a href="#home" class="btn-cta-large glass-btn-primary" data-lang="cta-button">همین الان شروع کن - فقط ۲۰$ 🚀</a>
+                <p class="cta-note" data-lang="cta-note">گارانتی بازگشت ۱۰۰٪ پول | تحویل در ۲۴ ساعت</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-left">
-                    <p data-lang="footer-copyright">&copy; 2025 IdeaValidator. All rights reserved.</p>
+                <div class="footer-brand">
+                    <span class="logo-icon">💡</span>
+                    <span>IdeaValidator</span>
+                    <p data-lang="footer-tagline">اعتبارسنجی ایده با قدرت AI</p>
                 </div>
-                <div class="footer-right">
-                    <a href="#privacy" data-lang="footer-privacy">Privacy Policy</a>
-                    <a href="#terms" data-lang="footer-terms">Terms of Service</a>
-                    <a href="#contact" data-lang="footer-contact">Contact</a>
+                <div class="footer-links">
+                    <a href="#" data-lang="footer-privacy">حریم خصوصی</a>
+                    <a href="#" data-lang="footer-terms">قوانین استفاده</a>
+                    <a href="mailto:contact@ideavalidator.com" data-lang="footer-contact">تماس با ما</a>
                 </div>
+                <p class="footer-copyright" data-lang="footer-copyright">© ۲۰۲۵ IdeaValidator. تمامی حقوق محفوظ است.</p>
             </div>
         </div>
     </footer>

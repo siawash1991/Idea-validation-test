@@ -1,8 +1,6 @@
 // ============================================
 // Google Apps Script URL Configuration
 // ============================================
-// IMPORTANT: Replace this with your actual Google Apps Script deployment URL
-// Get this URL from: Extensions → Apps Script → Deploy → New Deployment
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxJ1hUTuNWQEYgSy842Lbp4S-vEfwuC3zuZWm89VSS9zttKZjFIQYbK1mXpeIr--uwDzw/exec';
 
 // ============================================
@@ -12,335 +10,311 @@ const translations = {
     en: {
         // Navigation
         'nav-home': 'Home',
-        'nav-problem': 'Problem',
-        'nav-solution': 'Solution',
-        'nav-features': 'Features',
+        'nav-problem': 'Why Validate?',
+        'nav-solution': 'What You Get',
         'nav-pricing': 'Pricing',
-        'nav-signup': 'Sign Up',
 
         // Hero Section
-        'hero-title': 'Get Your Validation Score in 5 Minutes (Not 5 Months)',
-        'hero-subtitle': '42% of startups fail due to no market demand. We validate yours against 12,000+ real problems from Reddit, Product Hunt, Hacker News & more.',
-        'hero-cta': 'See Your Validation Score',
-        'hero-trust': 'Trusted by 100+ founders',
+        'hero-badge': 'Complete Research with AI Power',
+        'hero-title': 'No Time to <span class="gradient-text">Validate</span> Your Idea?',
+        'hero-subtitle': 'Our team uses AI power to conduct complete research on Reddit and Perplexity, finding all customer Pain Points for you!',
+        'price-amount': '$20',
+        'price-amount-fa': '2M Toman',
+        'price-desc': 'Per complete idea validation',
+        'trust-1': 'Delivery in 24 hours',
+        'trust-2': 'Money-back guarantee',
+        'trust-3': 'Complete PDF report',
 
-        // Problem Section
-        'problem-title': 'The Problem',
-        'problem-stat': '42% of startups fail due to lack of market demand',
-        'problem1-title': 'Wasted Time',
-        'problem1-desc': 'Months spent building products nobody wants',
-        'problem2-title': 'Wasted Money',
-        'problem2-desc': 'Thousands invested in unvalidated ideas',
-        'problem3-title': 'Emotional Toll',
-        'problem3-desc': 'The stress of uncertainty and fear of failure',
-        'problem4-title': 'No Clear Direction',
-        'problem4-desc': 'Unsure if you\'re solving a real problem',
-
-        // Solution Section
-        'solution-title': 'Multi-AI Powered Market Research',
-        'solution-subtitle': 'We combine multiple AI systems to give you complete market intelligence',
-        'solution-col1-title': 'Our AI Technology Stack',
-        'solution-step1': 'Reddit Analysis: Real user opinions & pain points',
-        'solution-step2': 'Perplexity Deep Search: Latest market trends & data',
-        'solution-step3': 'Claude Deep Thinking: Complex market analysis',
-        'solution-step4': 'Multi-AI Synthesis: Combined insights from all AIs',
-        'solution-step5': 'Profitability Score: Is your idea actually profitable?',
-        'solution-col2-title': 'What You Get',
-        'solution-get1': 'Real Reddit user demand & pain points',
-        'solution-get2': 'Deep market research via Perplexity',
-        'solution-get3': 'Competition & pricing analysis',
-        'solution-get4': 'Revenue potential & profit forecast',
-        'solution-get5': 'Go/No-Go recommendation with reasons',
-
-        // Data Sources Section
-        'data-title': 'Analyzing 12,000+ Real Problems Daily',
-        'data-subtitle': 'We search these platforms to find what people actually need',
-        'data-update': 'Updated daily',
-
-        // What You Get Section
-        'whatyouget-title': 'What You Get in Your Report',
-        'whatyouget-subtitle': 'Everything you need to make a confident GO/NO-GO decision',
-        'whatyouget-item1-title': 'Validation Score (0-10)',
-        'whatyouget-item1-desc': 'Clear score showing market demand strength with confidence level',
-        'whatyouget-item2-title': 'Top 5 Pain Points',
-        'whatyouget-item2-desc': 'Real quotes & evidence from actual users expressing their problems',
-        'whatyouget-item3-title': 'Market Size Estimate',
-        'whatyouget-item3-desc': 'TAM/SAM/SOM calculations to understand your revenue potential',
-        'whatyouget-item4-title': 'Willingness-to-Pay',
-        'whatyouget-item4-desc': 'What customers will actually pay based on competitor analysis',
-        'whatyouget-item5-title': 'Competition Analysis',
-        'whatyouget-item5-desc': 'Who else is solving this and how you can differentiate',
-        'whatyouget-item6-title': 'GO/NO-GO Decision',
-        'whatyouget-item6-desc': 'Clear recommendation with reasoning: Build it, pivot, or drop it',
-
-        // Social Proof Section
-        'social-title': 'Join 100+ Successful Founders',
-        'social-subtitle': 'Entrepreneurs who validated before building',
-        'social-testimonial1': 'Saved me 6 months of wasted development time',
-        'social-testimonial1-author': 'Ahmed K.',
-        'social-testimonial2': 'Found the real market problem I should solve',
-        'social-testimonial2-author': 'Sarah M.',
-        'social-testimonial3': 'Perfect validation before pitching to investors',
-        'social-testimonial3-author': 'Mohammad R.',
-        'social-stat1': '100+',
-        'social-stat1-label': 'Founders',
-        'social-stat2': '12K+',
-        'social-stat2-label': 'Problems Analyzed',
-        'social-stat3': '5 min',
-        'social-stat3-label': 'Avg. Time',
-
-        // Features Section
-        'features-title': 'Powered by Multiple AI Systems',
-        'features-subtitle': 'We don\'t rely on one AI - we combine the best of all',
-        'feature1-title': 'Reddit + Perplexity Fusion',
-        'feature1-desc': 'Real user opinions from Reddit combined with deep web research from Perplexity to uncover actual market demand',
-        'feature2-title': 'Claude Deep Thinking',
-        'feature2-desc': 'Advanced reasoning capabilities analyze complex market dynamics, competition, and profitability scenarios',
-        'feature3-title': 'Multi-AI Synthesis',
-        'feature3-desc': 'All AI outputs combined into one comprehensive report telling you: Is your idea executable and profitable?',
-
-        // How It Works
-        'how-title': 'How Our Multi-AI System Works',
-        'how-subtitle': 'Four AI-powered steps to complete market validation',
-        'how-step1-title': '1. You Submit Your Idea',
-        'how-step1-desc': 'Simply describe your business idea - our system handles the rest',
-        'how-step2-title': '2. Multi-AI Deep Research',
-        'how-step2-desc': 'Reddit scraping + Perplexity search + Claude analysis running in parallel',
-        'how-step3-title': '3. AI Synthesis & Scoring',
-        'how-step3-desc': 'All AI insights combined into profitability score & feasibility analysis',
-        'how-step4-title': '4. Get Your Complete Report',
-        'how-step4-desc': 'Detailed report: Market demand, competition, revenue potential, and Go/No-Go decision',
-
-        // Pricing Section
-        'pricing-title': 'Simple, Transparent Pricing',
-        'pricing-subtitle': 'Start free, upgrade when you need more validations',
-        'pricing1-name': 'FREE',
-        'pricing1-price': '$0',
-        'pricing1-time': '1 validation/month',
-        'pricing1-feat1': 'Basic validation score',
-        'pricing1-feat2': 'Top 3 pain points',
-        'pricing1-feat3': 'Market size estimate',
-        'pricing1-feat4': 'Email support',
-        'pricing1-feat5': '—',
-        'pricing1-btn': 'Start Free',
-        'pricing2-name': 'STARTER',
-        'pricing2-price': '$39',
-        'pricing2-time': '5 validations/month',
-        'pricing2-feat1': 'Full validation score (0-10)',
-        'pricing2-feat2': 'Top 5 pain points with quotes',
-        'pricing2-feat3': 'TAM/SAM/SOM calculations',
-        'pricing2-feat4': 'Competition analysis',
-        'pricing2-feat5': 'GO/NO-GO recommendation',
-        'pricing2-btn': 'Get Started',
-        'pricing2-popular': 'Most Popular',
-        'pricing3-name': 'PRO',
-        'pricing3-price': '$99',
-        'pricing3-time': 'Unlimited validations',
-        'pricing3-feat1': 'Everything in Starter',
-        'pricing3-feat2': 'Willingness-to-pay analysis',
-        'pricing3-feat3': 'Customer profile deep dive',
-        'pricing3-feat4': 'Priority email support',
-        'pricing3-feat5': 'API access (coming soon)',
-        'pricing3-btn': 'Go Pro',
-
-        // Signup Section
-        'signup-title': 'Join the Beta',
-        'signup-subtitle': 'Be among the first to validate your ideas',
+        // Form
+        'form-title': 'Submit your idea now!',
+        'form-subtitle': 'We\'ll send you a complete report in less than 24 hours',
         'form-name-label': 'Full Name *',
         'form-name-placeholder': 'John Doe',
-        'form-email-label': 'Email Address *',
+        'form-email-label': 'Email *',
         'form-email-placeholder': 'john@example.com',
-        'form-phone-label': 'Phone Number (optional)',
-        'form-phone-placeholder': '+1 (555) 000-0000',
-        'form-submit-btn': 'Join the Beta',
+        'form-phone-label': 'Phone Number',
+        'form-phone-placeholder': '+1 555 123 4567',
+        'form-idea-label': 'Describe your idea briefly *',
+        'form-idea-placeholder': 'e.g., An app for managing daily expenses...',
+        'form-submit-btn': 'Start Validation',
+        'form-note': 'Your information is confidential and will not be shared',
+
+        // Scroll
+        'scroll-text': 'Learn more',
+
+        // Why Section
+        'why-badge': 'Shocking Statistics',
+        'why-title': 'Why should you validate your idea before starting?',
+        'stat1-title': 'Fail Due to No Demand',
+        'stat1-desc': '42% of startups fail simply because no one wants their product!',
+        'stat2-title': 'Average Capital Wasted',
+        'stat2-desc': 'Average money founders lose before realizing their mistake',
+        'stat3-title': 'Average Time Wasted',
+        'stat3-desc': 'Time spent building something the market doesn\'t want',
+        'problem1-title': 'Starting Without Research',
+        'problem1-desc': 'You think your idea is great but don\'t know what people actually want',
+        'problem2-title': 'No Time for Research',
+        'problem2-desc': 'Market research takes months and you need to start quickly',
+        'problem3-title': 'Don\'t Know Where to Research',
+        'problem3-desc': 'Real data is scattered: Reddit, Twitter, forums...',
+        'problem4-title': 'Fear of Failure',
+        'problem4-desc': 'You don\'t know if your idea will succeed and it\'s stressful',
+
+        // What You Get Section
+        'get-badge': 'Complete Report',
+        'get-title': 'What do you get from us?',
+        'get-subtitle': 'A comprehensive report prepared with AI power and real source research',
+        'step1-title': 'Submit Your Idea',
+        'step1-desc': 'Just explain your idea in one line',
+        'step2-title': 'AI Does Research',
+        'step2-desc': 'Search in Reddit + Perplexity + other sources',
+        'step3-title': 'Analysis & Scoring',
+        'step3-desc': 'Pain Points + Competitors + Market Potential',
+        'step4-title': 'Get PDF Report',
+        'step4-desc': 'Complete report in 24 hours',
+        'del1-title': 'Real Pain Points',
+        'del1-desc': 'Real problems people have expressed on Reddit and forums - with links to original posts',
+        'del2-title': 'Validation Score (0-10)',
+        'del2-desc': 'A clear score showing how much potential your idea has',
+        'del3-title': 'Competitor Analysis',
+        'del3-desc': 'Who is solving this problem and how you can differentiate',
+        'del4-title': 'Market Size Estimate',
+        'del4-desc': 'TAM/SAM/SOM - How big is this market and how much can you capture',
+        'del5-title': 'Willingness to Pay',
+        'del5-desc': 'How much are people willing to pay to solve this problem?',
+        'del6-title': 'Final Recommendation: GO/NO-GO',
+        'del6-desc': 'A clear recommendation with reasoning: Build, pivot, or drop',
+
+        // Sources Section
+        'sources-badge': 'Data Sources',
+        'sources-title': 'Where do we research?',
+        'sources-subtitle': 'Combining AI with real data from across the internet',
+        'source-reddit': 'Deep search in relevant subreddits to find real user problems',
+        'source-perplexity': 'Deep research with latest market data and trends',
+        'source-claude': 'Advanced analysis and combining all data for final report',
+
+        // Pricing Section
+        'pricing-badge': 'Simple Pricing',
+        'pricing-title': 'One Price, One Complete Report',
+        'pricing-subtitle': 'No complicated plans - just pay and get your report',
+        'pricing-popular': 'Only Plan',
+        'pricing-name': 'Complete Validation',
+        'price-usd': 'USD',
+        'price-toman': 'Toman',
+        'price-per': 'Per idea',
+        'feat1': 'Complete Reddit Research',
+        'feat2': 'Deep Perplexity Search',
+        'feat3': 'Claude AI Analysis',
+        'feat4': '5+ Real Pain Points with Links',
+        'feat5': 'Validation Score 0-10',
+        'feat6': 'Competitor Analysis',
+        'feat7': 'Market Size Estimate',
+        'feat8': 'GO/NO-GO Recommendation',
+        'feat9': 'Complete PDF Report',
+        'feat10': 'Delivery in 24 Hours',
+        'pricing-cta': 'Start Now',
+        'guarantee': '100% money-back guarantee if not satisfied',
+
+        // Social Proof
+        'social-badge': 'Reviews',
+        'social-title': 'Why do founders trust us?',
+        'testimonial1': '"Saved me 6 months! Found out my idea had no market before wasting time and money."',
+        'testimonial1-author': 'Ahmed K.',
+        'testimonial1-role': 'Startup Founder',
+        'testimonial2': '"The report was very complete. Real Pain Points with links to Reddit posts - exactly what I needed!"',
+        'testimonial2-author': 'Sarah M.',
+        'testimonial2-role': 'Product Manager',
+        'testimonial3': '"Got the report before meeting investors. Really helped me speak with confidence."',
+        'testimonial3-author': 'Mohammad R.',
+        'testimonial3-role': 'Tech Founder',
+        'stat-founders': '100+',
+        'stat-founders-label': 'Founders',
+        'stat-ideas': '250+',
+        'stat-ideas-label': 'Ideas Reviewed',
+        'stat-satisfaction': '98%',
+        'stat-satisfaction-label': 'Satisfaction',
+        'stat-time': '24h',
+        'stat-time-label': 'Delivery Time',
+
+        // CTA Section
+        'cta-title': 'Ready to validate your idea?',
+        'cta-subtitle': 'Before wasting time and money, make sure people actually want what you\'re building!',
+        'cta-button': 'Start Now - Only $20',
+        'cta-note': '100% Money-back Guarantee | 24 Hour Delivery',
 
         // Footer
-        'footer-copyright': '© 2025 IdeaValidator. All rights reserved.',
-        'footer-privacy': 'Privacy Policy',
-        'footer-terms': 'Terms of Service',
+        'footer-tagline': 'Idea Validation with AI Power',
+        'footer-privacy': 'Privacy',
+        'footer-terms': 'Terms',
         'footer-contact': 'Contact',
+        'footer-copyright': '2025 IdeaValidator. All rights reserved.',
 
-        // Form Messages
-        'signup-count-plural': 'Join {count} other entrepreneurs',
-        'signup-count-first': 'Be the first to join!',
-        'form-submitting': 'Submitting...',
+        // Messages
         'error-name-required': 'Please enter your name',
         'error-email-required': 'Please enter your email',
-        'error-email-invalid': 'Please enter a valid email address',
-        'error-script-not-configured': '⚠️ Google Apps Script URL not configured. Please update SCRIPT_URL in main.js',
-        'success-message': '🎉 Success! You\'ve been added to the beta list. Check your email!',
-        'error-network': 'Network error. Please check your connection and try again.',
-        'error-duplicate': 'This email is already registered!'
+        'error-email-invalid': 'Please enter a valid email',
+        'error-idea-required': 'Please describe your idea',
+        'success-message': 'Success! We received your idea. Check your email for confirmation.',
+        'error-network': 'Network error. Please try again.',
+        'form-submitting': 'Submitting...'
     },
     fa: {
         // Navigation
         'nav-home': 'خانه',
-        'nav-problem': 'مشکل',
-        'nav-solution': 'راه‌حل',
-        'nav-features': 'ویژگی‌ها',
-        'nav-pricing': 'قیمت‌گذاری',
-        'nav-signup': 'ثبت‌نام',
+        'nav-problem': 'چرا اعتبارسنجی؟',
+        'nav-solution': 'چه می‌گیرید؟',
+        'nav-pricing': 'قیمت',
 
         // Hero Section
-        'hero-title': 'امتیاز اعتبارسنجی را در ۵ دقیقه دریافت کنید (نه ۵ ماه)',
-        'hero-subtitle': '۴۲٪ استارتاپ‌ها به دلیل نبود تقاضای بازار شکست می‌خورند. ما ایده شما را در مقابل ۱۲,۰۰۰+ مشکل واقعی از Reddit، Product Hunt، Hacker News و بیشتر اعتبارسنجی می‌کنیم.',
-        'hero-cta': 'امتیاز اعتبارسنجی خود را ببینید',
-        'hero-trust': 'مورد اعتماد ۱۰۰+ بنیان‌گذار',
+        'hero-badge': 'تحقیق کامل با قدرت AI',
+        'hero-title': 'وقت نداری ایده‌ات رو <span class="gradient-text">اعتبارسنجی</span> کنی؟',
+        'hero-subtitle': 'تیم ما با قدرت هوش مصنوعی، یک تحقیق کامل در Reddit و Perplexity انجام میده و تمام نقاط درد (Pain Points) مشتریان رو برات پیدا می‌کنه!',
+        'price-amount': '۲۰$',
+        'price-amount-fa': '۲ میلیون تومان',
+        'price-desc': 'برای هر ایده‌سنجی کامل',
+        'trust-1': 'تحویل در ۲۴ ساعت',
+        'trust-2': 'گارانتی بازگشت پول',
+        'trust-3': 'گزارش کامل PDF',
 
-        // Problem Section
-        'problem-title': 'مشکل',
-        'problem-stat': '۴۲٪ استارتاپ‌ها به دلیل عدم تقاضای بازار شکست می‌خورند',
-        'problem1-title': 'اتلاف زمان',
-        'problem1-desc': 'ماه‌ها صرف ساخت محصولاتی که کسی نمی‌خواهد',
-        'problem2-title': 'اتلاف پول',
-        'problem2-desc': 'هزاران دلار سرمایه‌گذاری در ایده‌های اعتبارسنجی نشده',
-        'problem3-title': 'فشار روحی',
-        'problem3-desc': 'استرس ناشی از عدم اطمینان و ترس از شکست',
-        'problem4-title': 'عدم مسیر روشن',
-        'problem4-desc': 'عدم اطمینان از حل کردن یک مشکل واقعی',
-
-        // Solution Section
-        'solution-title': 'تحقیق بازار با چند هوش مصنوعی',
-        'solution-subtitle': 'ما چندین سیستم هوش مصنوعی را ترکیب می‌کنیم تا اطلاعات کامل بازار به شما بدهیم',
-        'solution-col1-title': 'پشته فناوری هوش مصنوعی ما',
-        'solution-step1': 'تحلیل Reddit: نظرات واقعی کاربران و مشکلات',
-        'solution-step2': 'جستجوی عمیق Perplexity: آخرین روندها و داده‌ها',
-        'solution-step3': 'تفکر عمیق Claude: تحلیل پیچیده بازار',
-        'solution-step4': 'ترکیب چند AI: بینش‌های ترکیبی از همه هوش مصنوعی‌ها',
-        'solution-step5': 'امتیاز سودآوری: آیا ایده شما واقعاً سودآور است؟',
-        'solution-col2-title': 'آنچه دریافت می‌کنید',
-        'solution-get1': 'تقاضای واقعی کاربران Reddit و مشکلات',
-        'solution-get2': 'تحقیق عمیق بازار از طریق Perplexity',
-        'solution-get3': 'تحلیل رقابت و قیمت‌گذاری',
-        'solution-get4': 'پتانسیل درآمد و پیش‌بینی سود',
-        'solution-get5': 'توصیه برو/نرو با دلایل',
-
-        // Data Sources Section
-        'data-title': 'تحلیل روزانه ۱۲,۰۰۰+ مشکل واقعی',
-        'data-subtitle': 'ما این پلتفرم‌ها را جستجو می‌کنیم تا بفهمیم مردم واقعاً به چه چیزی نیاز دارند',
-        'data-update': 'به‌روزرسانی روزانه',
-
-        // What You Get Section
-        'whatyouget-title': 'آنچه در گزارش خود دریافت می‌کنید',
-        'whatyouget-subtitle': 'همه چیز برای تصمیم‌گیری با اطمینان: برو/نرو',
-        'whatyouget-item1-title': 'امتیاز اعتبارسنجی (۰-۱۰)',
-        'whatyouget-item1-desc': 'امتیاز واضح که قدرت تقاضای بازار را با سطح اطمینان نشان می‌دهد',
-        'whatyouget-item2-title': '۵ مشکل برتر',
-        'whatyouget-item2-desc': 'نقل‌قول‌ها و مدارک واقعی از کاربران واقعی که مشکلات خود را بیان می‌کنند',
-        'whatyouget-item3-title': 'تخمین اندازه بازار',
-        'whatyouget-item3-desc': 'محاسبات TAM/SAM/SOM برای درک پتانسیل درآمد شما',
-        'whatyouget-item4-title': 'تمایل به پرداخت',
-        'whatyouget-item4-desc': 'مشتریان واقعاً چقدر پرداخت می‌کنند بر اساس تحلیل رقبا',
-        'whatyouget-item5-title': 'تحلیل رقابت',
-        'whatyouget-item5-desc': 'چه کسی دیگری این مشکل را حل می‌کند و چطور می‌توانید متمایز شوید',
-        'whatyouget-item6-title': 'تصمیم برو/نرو',
-        'whatyouget-item6-desc': 'توصیه واضح با دلیل: بسازید، تغییر مسیر دهید یا رها کنید',
-
-        // Social Proof Section
-        'social-title': 'به ۱۰۰+ بنیان‌گذار موفق بپیوندید',
-        'social-subtitle': 'کارآفرینانی که قبل از ساخت اعتبارسنجی کردند',
-        'social-testimonial1': '۶ ماه توسعه هدر رفته را برایم ذخیره کرد',
-        'social-testimonial1-author': 'احمد ک.',
-        'social-testimonial2': 'مشکل واقعی بازار را که باید حل کنم پیدا کردم',
-        'social-testimonial2-author': 'سارا م.',
-        'social-testimonial3': 'اعتبارسنجی عالی قبل از ارائه به سرمایه‌گذاران',
-        'social-testimonial3-author': 'محمد ر.',
-        'social-stat1': '۱۰۰+',
-        'social-stat1-label': 'بنیان‌گذار',
-        'social-stat2': '۱۲ هزار+',
-        'social-stat2-label': 'مشکل تحلیل شده',
-        'social-stat3': '۵ دقیقه',
-        'social-stat3-label': 'میانگین زمان',
-
-        // Features Section
-        'features-title': 'قدرت گرفته از چندین سیستم هوش مصنوعی',
-        'features-subtitle': 'ما به یک AI متکی نیستیم - بهترین همه را ترکیب می‌کنیم',
-        'feature1-title': 'ترکیب Reddit + Perplexity',
-        'feature1-desc': 'نظرات واقعی کاربران از Reddit ترکیب با تحقیق عمیق وب از Perplexity برای کشف تقاضای واقعی بازار',
-        'feature2-title': 'تفکر عمیق Claude',
-        'feature2-desc': 'قابلیت‌های استدلال پیشرفته برای تحلیل دینامیک‌های پیچیده بازار، رقابت و سناریوهای سودآوری',
-        'feature3-title': 'ترکیب چند AI',
-        'feature3-desc': 'تمام خروجی‌های AI در یک گزارش جامع: آیا ایده شما قابل اجرا و سودآور است؟',
-
-        // How It Works
-        'how-title': 'نحوه کار سیستم چند AI ما',
-        'how-subtitle': 'چهار مرحله هوش مصنوعی برای اعتبارسنجی کامل بازار',
-        'how-step1-title': '۱. شما ایده را ارسال می‌کنید',
-        'how-step1-desc': 'فقط ایده کسب‌وکار خود را توصیف کنید - سیستم ما بقیه را انجام می‌دهد',
-        'how-step2-title': '۲. تحقیق عمیق چند AI',
-        'how-step2-desc': 'اسکرپ Reddit + جستجوی Perplexity + تحلیل Claude به صورت موازی',
-        'how-step3-title': '۳. ترکیب AI و امتیازدهی',
-        'how-step3-desc': 'تمام بینش‌های AI ترکیب می‌شوند: امتیاز سودآوری + تحلیل امکان‌پذیری',
-        'how-step4-title': '۴. گزارش کامل دریافت کنید',
-        'how-step4-desc': 'گزارش تفصیلی: تقاضای بازار، رقابت، پتانسیل درآمد و تصمیم برو/نرو',
-
-        // Pricing Section
-        'pricing-title': 'قیمت‌گذاری ساده و شفاف',
-        'pricing-subtitle': 'رایگان شروع کنید، وقتی نیاز به اعتبارسنجی بیشتر دارید ارتقا دهید',
-        'pricing1-name': 'رایگان',
-        'pricing1-price': '$۰',
-        'pricing1-time': '۱ اعتبارسنجی/ماه',
-        'pricing1-feat1': 'امتیاز اعتبارسنجی پایه',
-        'pricing1-feat2': '۳ مشکل برتر',
-        'pricing1-feat3': 'تخمین اندازه بازار',
-        'pricing1-feat4': 'پشتیبانی ایمیل',
-        'pricing1-feat5': '—',
-        'pricing1-btn': 'شروع رایگان',
-        'pricing2-name': 'استارتر',
-        'pricing2-price': '$۳۹',
-        'pricing2-time': '۵ اعتبارسنجی/ماه',
-        'pricing2-feat1': 'امتیاز کامل اعتبارسنجی (۰-۱۰)',
-        'pricing2-feat2': '۵ مشکل برتر با نقل‌قول',
-        'pricing2-feat3': 'محاسبات TAM/SAM/SOM',
-        'pricing2-feat4': 'تحلیل رقابت',
-        'pricing2-feat5': 'توصیه برو/نرو',
-        'pricing2-btn': 'شروع کنید',
-        'pricing2-popular': 'محبوب‌ترین',
-        'pricing3-name': 'حرفه‌ای',
-        'pricing3-price': '$۹۹',
-        'pricing3-time': 'اعتبارسنجی نامحدود',
-        'pricing3-feat1': 'همه چیز در استارتر',
-        'pricing3-feat2': 'تحلیل تمایل به پرداخت',
-        'pricing3-feat3': 'بررسی عمیق پروفایل مشتری',
-        'pricing3-feat4': 'پشتیبانی اولویت‌دار',
-        'pricing3-feat5': 'دسترسی API (به زودی)',
-        'pricing3-btn': 'حرفه‌ای شوید',
-
-        // Signup Section
-        'signup-title': 'به بتا بپیوندید',
-        'signup-subtitle': 'جزو اولین‌ها باشید که ایده‌هایتان را اعتبارسنجی می‌کنند',
+        // Form
+        'form-title': 'همین الان ایده‌ات رو ثبت کن!',
+        'form-subtitle': 'ما در کمتر از ۲۴ ساعت گزارش کامل رو برات میفرستیم',
         'form-name-label': 'نام کامل *',
         'form-name-placeholder': 'علی احمدی',
-        'form-email-label': 'آدرس ایمیل *',
+        'form-email-label': 'ایمیل *',
         'form-email-placeholder': 'ali@example.com',
-        'form-phone-label': 'شماره تلفن (اختیاری)',
+        'form-phone-label': 'شماره تماس',
         'form-phone-placeholder': '۰۹۱۲۳۴۵۶۷۸۹',
-        'form-submit-btn': 'عضویت در بتا',
+        'form-idea-label': 'ایده‌ات رو خلاصه بنویس *',
+        'form-idea-placeholder': 'مثلاً: یک اپلیکیشن برای مدیریت هزینه‌های روزانه...',
+        'form-submit-btn': 'شروع اعتبارسنجی',
+        'form-note': 'اطلاعات شما محرمانه است و با کسی به اشتراک گذاشته نمی‌شود',
+
+        // Scroll
+        'scroll-text': 'بیشتر بدانید',
+
+        // Why Section
+        'why-badge': 'آمار تکان‌دهنده',
+        'why-title': 'چرا باید قبل از شروع، ایده‌ات رو اعتبارسنجی کنی؟',
+        'stat1-title': 'شکست به دلیل نبود تقاضا',
+        'stat1-desc': '۴۲٪ استارتاپ‌ها فقط به این دلیل شکست می‌خورند که محصولشان را کسی نمی‌خواهد!',
+        'stat2-title': 'میانگین هدررفت سرمایه',
+        'stat2-desc': 'میانگین پولی که بنیان‌گذاران قبل از فهمیدن اشتباهشان از دست می‌دهند',
+        'stat3-title': 'میانگین زمان هدررفته',
+        'stat3-desc': 'زمانی که صرف ساخت چیزی می‌شود که بازار نمی‌خواهد',
+        'problem1-title': 'بدون تحقیق شروع می‌کنی',
+        'problem1-desc': 'فکر می‌کنی ایده‌ات عالیه ولی نمی‌دونی مردم واقعاً چی می‌خوان',
+        'problem2-title': 'وقت تحقیق نداری',
+        'problem2-desc': 'تحقیق بازار ماه‌ها طول می‌کشه و تو باید سریع شروع کنی',
+        'problem3-title': 'نمی‌دونی کجا تحقیق کنی',
+        'problem3-desc': 'داده‌های واقعی پراکنده‌ان: Reddit، Twitter، فروم‌ها...',
+        'problem4-title': 'ترس از شکست',
+        'problem4-desc': 'نمی‌دونی ایده‌ات موفق میشه یا نه و این استرس‌زاست',
+
+        // What You Get Section
+        'get-badge': 'گزارش کامل',
+        'get-title': 'چی از ما دریافت می‌کنی؟',
+        'get-subtitle': 'یک گزارش جامع که با قدرت AI و تحقیق در منابع واقعی آماده شده',
+        'step1-title': 'ایده‌ات رو ثبت کن',
+        'step1-desc': 'فقط ایده‌ات رو یه خط توضیح بده',
+        'step2-title': 'AI تحقیق می‌کنه',
+        'step2-desc': 'جستجو در Reddit + Perplexity + منابع دیگه',
+        'step3-title': 'تحلیل و امتیازدهی',
+        'step3-desc': 'Pain Points + رقبا + پتانسیل بازار',
+        'step4-title': 'گزارش PDF دریافت کن',
+        'step4-desc': 'گزارش کامل در ۲۴ ساعت',
+        'del1-title': 'Pain Points واقعی',
+        'del1-desc': 'مشکلات واقعی که مردم در Reddit و فروم‌ها بیان کردن - با لینک به پست‌های اصلی',
+        'del2-title': 'امتیاز اعتبارسنجی (۰-۱۰)',
+        'del2-desc': 'یک امتیاز واضح که نشون میده ایده‌ات چقدر پتانسیل داره',
+        'del3-title': 'تحلیل رقبا',
+        'del3-desc': 'چه کسایی این مشکل رو حل می‌کنن و چطور میتونی متمایز باشی',
+        'del4-title': 'تخمین اندازه بازار',
+        'del4-desc': 'TAM/SAM/SOM - این بازار چقدر بزرگه و چقدر میتونی ازش سهم ببری',
+        'del5-title': 'تمایل به پرداخت',
+        'del5-desc': 'مردم حاضرن چقدر برای حل این مشکل پول بدن؟',
+        'del6-title': 'توصیه نهایی: برو/نرو',
+        'del6-desc': 'یک توصیه واضح با دلیل: بساز، تغییر بده، یا رها کن',
+
+        // Sources Section
+        'sources-badge': 'منابع داده',
+        'sources-title': 'از کجا تحقیق می‌کنیم؟',
+        'sources-subtitle': 'ترکیب هوش مصنوعی با داده‌های واقعی از سراسر اینترنت',
+        'source-reddit': 'جستجوی عمیق در ساب‌ردیت‌های مرتبط برای پیدا کردن مشکلات واقعی کاربران',
+        'source-perplexity': 'تحقیق عمیق با جدیدترین داده‌ها و روندهای بازار',
+        'source-claude': 'تحلیل پیشرفته و ترکیب همه داده‌ها برای گزارش نهایی',
+
+        // Pricing Section
+        'pricing-badge': 'قیمت ساده',
+        'pricing-title': 'یک قیمت، یک گزارش کامل',
+        'pricing-subtitle': 'بدون پلن‌های پیچیده - فقط پرداخت کن و گزارشت رو بگیر',
+        'pricing-popular': 'تنها پلن',
+        'pricing-name': 'اعتبارسنجی کامل',
+        'price-usd': 'دلار',
+        'price-toman': 'تومان',
+        'price-per': 'برای هر ایده',
+        'feat1': 'تحقیق کامل در Reddit',
+        'feat2': 'جستجوی عمیق Perplexity',
+        'feat3': 'تحلیل با Claude AI',
+        'feat4': '۵+ Pain Point واقعی با لینک',
+        'feat5': 'امتیاز اعتبارسنجی ۰-۱۰',
+        'feat6': 'تحلیل رقبا',
+        'feat7': 'تخمین اندازه بازار',
+        'feat8': 'توصیه برو/نرو',
+        'feat9': 'گزارش PDF کامل',
+        'feat10': 'تحویل در ۲۴ ساعت',
+        'pricing-cta': 'همین الان شروع کن',
+        'guarantee': 'گارانتی ۱۰۰٪ بازگشت پول اگر راضی نبودی',
+
+        // Social Proof
+        'social-badge': 'نظرات',
+        'social-title': 'چرا بنیان‌گذاران به ما اعتماد می‌کنن؟',
+        'testimonial1': '"۶ ماه وقتم رو نجات داد! فهمیدم ایده‌ام بازار نداره قبل از اینکه پول و وقتم رو هدر بدم."',
+        'testimonial1-author': 'احمد کریمی',
+        'testimonial1-role': 'بنیان‌گذار استارتاپ',
+        'testimonial2': '"گزارش خیلی کامل بود. Pain Points واقعی با لینک به پست‌های Reddit - دقیقاً چیزی که نیاز داشتم!"',
+        'testimonial2-author': 'سارا محمدی',
+        'testimonial2-role': 'Product Manager',
+        'testimonial3': '"قبل از جلسه با سرمایه‌گذارها گزارش رو گرفتم. خیلی کمکم کرد که با اعتماد به نفس صحبت کنم."',
+        'testimonial3-author': 'محمد رضایی',
+        'testimonial3-role': 'Tech Founder',
+        'stat-founders': '۱۰۰+',
+        'stat-founders-label': 'بنیان‌گذار',
+        'stat-ideas': '۲۵۰+',
+        'stat-ideas-label': 'ایده بررسی شده',
+        'stat-satisfaction': '۹۸٪',
+        'stat-satisfaction-label': 'رضایت مشتری',
+        'stat-time': '۲۴h',
+        'stat-time-label': 'زمان تحویل',
+
+        // CTA Section
+        'cta-title': 'آماده‌ای ایده‌ات رو اعتبارسنجی کنی؟',
+        'cta-subtitle': 'قبل از اینکه وقت و پولت رو هدر بدی، مطمئن شو که مردم واقعاً چیزی که می‌سازی رو می‌خوان!',
+        'cta-button': 'همین الان شروع کن - فقط ۲۰$',
+        'cta-note': 'گارانتی بازگشت ۱۰۰٪ پول | تحویل در ۲۴ ساعت',
 
         // Footer
-        'footer-copyright': '© ۲۰۲۵ ایده‌ولیدیتور. تمامی حقوق محفوظ است.',
-        'footer-privacy': 'سیاست حریم خصوصی',
-        'footer-terms': 'شرایط استفاده',
-        'footer-contact': 'تماس',
+        'footer-tagline': 'اعتبارسنجی ایده با قدرت AI',
+        'footer-privacy': 'حریم خصوصی',
+        'footer-terms': 'قوانین استفاده',
+        'footer-contact': 'تماس با ما',
+        'footer-copyright': '© ۲۰۲۵ IdeaValidator. تمامی حقوق محفوظ است.',
 
-        // Form Messages
-        'signup-count-plural': 'به {count} کارآفرین دیگر بپیوندید',
-        'signup-count-first': 'اولین نفر باشید!',
-        'form-submitting': 'در حال ارسال...',
+        // Messages
         'error-name-required': 'لطفاً نام خود را وارد کنید',
         'error-email-required': 'لطفاً ایمیل خود را وارد کنید',
-        'error-email-invalid': 'لطفاً یک آدرس ایمیل معتبر وارد کنید',
-        'error-script-not-configured': '⚠️ URL اسکریپت گوگل تنظیم نشده است. لطفاً SCRIPT_URL را در main.js به‌روزرسانی کنید',
-        'success-message': '🎉 موفق! شما به لیست بتا اضافه شدید. ایمیل خود را بررسی کنید!',
-        'error-network': 'خطای شبکه. لطفاً اتصال خود را بررسی کنید و دوباره امتحان کنید.',
-        'error-duplicate': 'این ایمیل قبلاً ثبت شده است!'
+        'error-email-invalid': 'لطفاً یک ایمیل معتبر وارد کنید',
+        'error-idea-required': 'لطفاً ایده خود را توضیح دهید',
+        'success-message': 'با موفقیت ثبت شد! ایده شما دریافت شد. ایمیل خود را چک کنید.',
+        'error-network': 'خطای شبکه. لطفاً دوباره تلاش کنید.',
+        'form-submitting': 'در حال ارسال...'
     }
 };
 
 // ============================================
 // Current Language
 // ============================================
-let currentLang = localStorage.getItem('language') || 'en';
+let currentLang = localStorage.getItem('language') || 'fa';
 
 // ============================================
 // DOM Elements
@@ -349,11 +323,11 @@ const form = document.getElementById('signupForm');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const phoneInput = document.getElementById('phone');
+const ideaInput = document.getElementById('idea');
 const submitBtn = document.getElementById('submitBtn');
 const btnText = document.getElementById('btnText');
 const spinner = document.getElementById('spinner');
 const formMessage = document.getElementById('formMessage');
-const signupCount = document.getElementById('signupCount');
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
@@ -375,7 +349,13 @@ function switchLanguage(lang) {
     // Update all elements with data-lang attribute
     document.querySelectorAll('[data-lang]').forEach(element => {
         const key = element.getAttribute('data-lang');
-        element.textContent = t(key);
+        const translation = t(key);
+        // Check if translation contains HTML
+        if (translation.includes('<')) {
+            element.innerHTML = translation;
+        } else {
+            element.textContent = translation;
+        }
     });
 
     // Update placeholders
@@ -383,9 +363,6 @@ function switchLanguage(lang) {
         const key = element.getAttribute('data-lang-placeholder');
         element.placeholder = t(key);
     });
-
-    // Update signup counter
-    updateSignupCount();
 
     // Update active language button
     document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -418,18 +395,6 @@ function showMessage(message, type) {
 }
 
 // ============================================
-// Update Signup Counter
-// ============================================
-function updateSignupCount() {
-    let count = localStorage.getItem('signupCount') || 0;
-    if (count > 0) {
-        signupCount.textContent = t('signup-count-plural').replace('{count}', count);
-    } else {
-        signupCount.textContent = t('signup-count-first');
-    }
-}
-
-// ============================================
 // Loading State Management
 // ============================================
 function setLoadingState(isLoading) {
@@ -454,6 +419,7 @@ form.addEventListener('submit', async (e) => {
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
     const phone = phoneInput.value.trim();
+    const idea = ideaInput ? ideaInput.value.trim() : '';
 
     // Validate inputs
     if (!name) {
@@ -471,10 +437,8 @@ form.addEventListener('submit', async (e) => {
         return;
     }
 
-    // Check if SCRIPT_URL is configured
-    if (SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-        showMessage(t('error-script-not-configured'), 'error');
-        console.error('Please replace SCRIPT_URL with your actual Google Apps Script deployment URL');
+    if (ideaInput && !idea) {
+        showMessage(t('error-idea-required'), 'error');
         return;
     }
 
@@ -488,50 +452,22 @@ form.addEventListener('submit', async (e) => {
         formData.append('name', name);
         formData.append('email', email);
         formData.append('phone', phone);
+        formData.append('idea', idea);
+        formData.append('language', currentLang);
+        formData.append('timestamp', new Date().toISOString());
 
         // Send request to Google Apps Script
         const response = await fetch(SCRIPT_URL, {
             method: 'POST',
             body: formData,
-            mode: 'no-cors' // Required for Google Apps Script
+            mode: 'no-cors'
         });
-
-        // Note: With 'no-cors' mode, we can't read the response
-        // So we assume success if no error is thrown
 
         // Success handling
         showMessage(t('success-message'), 'success');
 
-        // Update signup counter
-        let count = parseInt(localStorage.getItem('signupCount') || 0);
-        count++;
-        localStorage.setItem('signupCount', count);
-        updateSignupCount();
-
         // Clear form fields
         form.reset();
-
-        // If you want to handle actual response (requires CORS setup in Apps Script):
-        // Uncomment below and remove 'no-cors' mode
-        /*
-        const data = await response.json();
-
-        if (data.status === 'success') {
-            showMessage('🎉 Success! You\'ve been added to the beta list. Check your email!', 'success');
-
-            // Update counter with actual count from server
-            if (data.totalSignups) {
-                localStorage.setItem('signupCount', data.totalSignups);
-                updateSignupCount();
-            }
-
-            form.reset();
-        } else if (data.status === 'duplicate') {
-            showMessage('This email is already registered!', 'error');
-        } else {
-            showMessage('An error occurred. Please try again.', 'error');
-        }
-        */
 
     } catch (error) {
         console.error('Error:', error);
@@ -558,6 +494,74 @@ navMenu.querySelectorAll('a').forEach(link => {
 });
 
 // ============================================
+// Smooth Scroll for Anchor Links
+// ============================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// ============================================
+// Intersection Observer for Animations
+// ============================================
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe all cards and sections
+document.querySelectorAll('.glass-card, .stat-card, .problem-card, .deliverable-card, .source-main, .testimonial-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+    observer.observe(el);
+});
+
+// Add animation class styles
+const style = document.createElement('style');
+style.textContent = `
+    .animate-in {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+`;
+document.head.appendChild(style);
+
+// ============================================
+// Navbar Scroll Effect
+// ============================================
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 100) {
+        navbar.style.background = 'rgba(15, 15, 26, 0.95)';
+    } else {
+        navbar.style.background = 'rgba(15, 15, 26, 0.8)';
+    }
+
+    lastScroll = currentScroll;
+});
+
+// ============================================
 // Initialize on Page Load
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -572,26 +576,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add smooth scrolling for all anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+    // Add hover effect to glass cards
+    document.querySelectorAll('.glass-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px)';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
         });
     });
 });
-
-// ============================================
-// Console Warning
-// ============================================
-if (SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-    console.warn('%c⚠️ SETUP REQUIRED', 'color: orange; font-size: 20px; font-weight: bold;');
-    console.warn('Please update the SCRIPT_URL variable in main.js with your Google Apps Script deployment URL');
-    console.warn('Instructions: https://github.com/YOUR_USERNAME/ideavalidator-landing#setup');
-}
