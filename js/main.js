@@ -55,9 +55,9 @@ const translations = {
         'deep-text2': 'Our goal is to help you understand if your idea works - not just a soulless report!',
 
         // Sources Section
-        'sources-badge': '🔗 Research Sources',
-        'sources-title': 'Where do we research?',
-        'sources-subtitle': 'Combining Iranian and global sources for complete research',
+        'sources-badge': '🔬 Deep Research',
+        'sources-title': 'How and where do we research?',
+        'sources-subtitle': 'Combining Iranian and global sources + smart analysis',
         'source-reddit': 'Deep search in relevant subreddits to find real problems of global users',
         'source-perplexity': 'Deep research with latest market data and trends',
         'source-claude': 'Advanced analysis and combining all data for final report',
@@ -185,9 +185,9 @@ const translations = {
         'deep-text2': 'هدف ما اینه که بفهمی ایده‌ات کارساز هست یا نه - نه فقط یه گزارش بی‌روح!',
 
         // Sources Section
-        'sources-badge': '🔗 منابع تحقیق',
-        'sources-title': 'از کجا تحقیق می‌کنیم؟',
-        'sources-subtitle': 'ترکیب منابع ایرانی و جهانی برای تحقیق کامل',
+        'sources-badge': '🔬 تحقیق عمیق',
+        'sources-title': 'چطور و از کجا تحقیق می‌کنیم؟',
+        'sources-subtitle': 'ترکیب منابع ایرانی و جهانی + تحلیل هوشمند',
         'source-reddit': 'جستجوی عمیق در ساب‌ردیت‌های مرتبط برای پیدا کردن مشکلات واقعی کاربران جهانی',
         'source-perplexity': 'تحقیق عمیق با جدیدترین داده‌ها و روندهای بازار',
         'source-claude': 'تحلیل پیشرفته و ترکیب همه داده‌ها برای گزارش نهایی',
